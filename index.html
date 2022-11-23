@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Loading, please wait...</p>
+    <script>
+        document.write('Hello, world!');
+        console.log('Hello, developers!');
+        document.write('<p>Угадайте число = от 0 до 999</p>');
+    </script>
+    
+    <script> 
+        let num = Math.floor((Math.random() * 1000));
+        console.log(num);
+
+        while (true) { 
+            let my_num = prompt('Введите число');
+
+            let b = isNaN(my_num);
+            if (b) {
+                alert("НЕ ЧИСЛО");
+                break;
+            }
+
+            my_num = Number(my_num)
+
+            if (num > my_num) {
+                alert("Загадоное число БОЛЬШЕ");
+            } else if (num < my_num) {
+                alert("Загадоное число МЕНЬШЕ");
+            } else {
+                alert("Поздравляю вы УГАДАЛИ число");
+                break;
+            }
+        };
+
+    </script>
+
+</body>
+</html>
